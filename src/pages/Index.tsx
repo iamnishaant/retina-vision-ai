@@ -58,9 +58,9 @@ const Index = () => {
             </Link>
             <Link
               to="/about-dr"
-              className="px-8 py-4 bg-secondary text-secondary-foreground font-semibold rounded-xl hover:bg-secondary/80 transition-all duration-300"
+              className="px-8 py-4 bg-accent text-accent-foreground font-semibold rounded-xl flex items-center gap-2 shadow-lg hover:scale-105 transition"
             >
-              Learn About DR
+              Next
             </Link>
           </motion.div>
         </motion.div>
@@ -159,7 +159,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <Eye className="h-5 w-5 text-primary" />
-            <span className="font-display font-semibold">DRVision</span>
+            <span className="font-display font-semibold">Dr.DR</span>
           </div>
           <p className="text-muted-foreground text-sm">
             Deep Learning Research Project • DDR & EyePACS Datasets

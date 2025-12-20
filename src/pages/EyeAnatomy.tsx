@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Suspense } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import Eye3D from '@/components/Eye3D';
@@ -39,10 +40,13 @@ const eyeParts = [
 
 const EyeAnatomy = () => {
   return (
-    <div className="min-h-screen animated-bg relative">
+    <div className="min-h-screen animated-bg relative pt-20">
       <AnimatedBackground />
       <Navbar />
-
+      <div className="flex justify-between px-6 pt-6">
+        <Link to="/about-dr" className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-bold shadow-lg hover:scale-105 transition">Previous</Link>
+        <Link to="/results" className="px-6 py-3 rounded-xl bg-accent text-accent-foreground font-bold shadow-lg hover:scale-105 transition">Next</Link>
+      </div>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">

@@ -178,7 +178,7 @@ const SearchBar = () => {
     } else {
       setAnswer({
         text: `I don't have specific information about "${query}" in my knowledge base. Try asking about: diabetic retinopathy basics, symptoms, stages (NPDR/PDR), treatment options, prevention, or our AI detection system. You can also explore terms like microaneurysms, hemorrhages, macula, or fundus imaging.`,
-        sources: ['DRVision Knowledge Base']
+        sources: ['Dr.DR Knowledge Base']
       });
     }
 

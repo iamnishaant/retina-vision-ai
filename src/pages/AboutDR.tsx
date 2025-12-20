@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { AlertTriangle, CheckCircle, TrendingUp, Eye, Heart, Droplets, Activity, Shield } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import AnimatedBackground from '@/components/AnimatedBackground';
@@ -45,10 +47,13 @@ const causes = [
 
 const AboutDR = () => {
   return (
-    <div className="min-h-screen animated-bg relative">
+    <div className="min-h-screen animated-bg relative pt-20">
       <AnimatedBackground />
       <Navbar />
-
+      <div className="flex justify-between px-6 pt-6">
+        <Link to="/" className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-bold shadow-lg hover:scale-105 transition">Previous</Link>
+        <Link to="/eye-anatomy" className="px-6 py-3 rounded-xl bg-accent text-accent-foreground font-bold shadow-lg hover:scale-105 transition">Next</Link>
+      </div>
       {/* Hero */}
       <section className="pt-32 pb-16 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -66,6 +71,20 @@ const AboutDR = () => {
               A comprehensive guide to one of the leading causes of vision loss worldwide, 
               affecting millions of people with diabetes.
             </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Intro video */}
+      <section className="px-6">
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-8"
+          >
+            <VideoBlock />
           </motion.div>
         </div>
       </section>
@@ -95,6 +114,12 @@ const AboutDR = () => {
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   The condition can develop in anyone who has type 1 or type 2 diabetes. The longer you have diabetes 
                   and the less controlled your blood sugar is, the more likely you are to develop this eye complication.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  DR is one of the leading causes of preventable vision loss worldwide, especially among working‑age adults. Early detection plays a crucial role in avoiding long‑term complications.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+                  DR is not fully curable, but it is highly manageable when detected early. Vision loss can often be prevented or slowed down with timely treatment and proper diabetes control.
                 </p>
               </div>
             </div>
@@ -242,3 +267,23 @@ const AboutDR = () => {
 };
 
 export default AboutDR;
+
+function VideoBlock() {
+  return (
+    <div className="max-w-4xl mx-auto">
+      <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl bg-black">
+        <video
+          controls
+          className="absolute inset-0 w-full h-full object-contain"
+          preload="metadata"
+          aria-label="Introductory video about diabetic retinopathy"
+        >
+          <source src="/videos/intro.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  );
+}
+
+

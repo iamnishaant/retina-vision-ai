@@ -19,9 +19,12 @@ const Navbar = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/about-dr', label: 'About DR' },
+    { path: '/preprocessing', label: 'Preprocessing' },
     { path: '/eye-anatomy', label: 'Eye Anatomy' },
     { path: '/results', label: 'Results' },
     { path: '/upload', label: 'Analyze Image' },
+    { path: '/project-overview', label: 'Project Overview' },
+    { path: '/project-datasets', label: 'Datasets & Performance' },
   ];
 
   return (
@@ -42,8 +45,8 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-primary blur-xl opacity-50" />
             </div>
             <span className="font-display font-bold text-xl">
-              <span className="text-primary">DR</span>
-              <span className="text-foreground">Vision</span>
+              <span className="text-primary">Dr.</span>
+              <span className="text-foreground">DR</span>
             </span>
           </Link>
 
