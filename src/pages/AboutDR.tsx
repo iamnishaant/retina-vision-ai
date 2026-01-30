@@ -77,17 +77,16 @@ const AboutDR = () => {
 
       {/* Intro video */}
       <section className="px-6">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-8"
-          >
-            <VideoBlock />
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8"
+        >
+          <VideoBlock />
+        </motion.div>
       </section>
+
 
       {/* What is DR */}
       <section className="py-16 px-6">
@@ -270,20 +269,19 @@ export default AboutDR;
 
 function VideoBlock() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl bg-black">
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="rounded-2xl overflow-hidden shadow-2xl bg-black">
         <video
           controls
-          className="absolute inset-0 w-full h-full object-contain"
+          className="w-full h-auto"
           preload="metadata"
-          aria-label="Introductory video about diabetic retinopathy"
         >
           <source src="/videos/intro.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
         </video>
       </div>
     </div>
   );
 }
+
 
 

@@ -21,6 +21,7 @@ const Navbar = () => {
     { path: '/about-dr', label: 'About DR' },
     { path: '/preprocessing', label: 'Preprocessing' },
     { path: '/eye-anatomy', label: 'Eye Anatomy' },
+    { path: '/dr-grading', label: 'DR Grading' },
     { path: '/results', label: 'Results' },
     { path: '/upload', label: 'Analyze Image' },
     { path: '/project-overview', label: 'Project Overview' },

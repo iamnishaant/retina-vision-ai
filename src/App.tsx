@@ -8,6 +8,7 @@ import AboutDR from "./pages/AboutDR";
 import EyeAnatomy from "./pages/EyeAnatomy";
 import Results from "./pages/Results";
 import Upload from "./pages/Upload";
+import DRGrading from "./pages/DRGrading";
 import NotFound from "./pages/NotFound";
 import ProjectInfo from "./pages/ProjectInfo";
 import ProjectOverview from "./pages/ProjectOverview";
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/eye-anatomy" element={<EyeAnatomy />} />
               <Route path="/results" element={<Results />} />
               <Route path="/upload" element={<Upload />} />
+              <Route path="/dr-grading" element={<DRGrading />} />
               <Route path="/preprocessing" element={<Preprocessing />} />
               <Route path="/group-1" element={<Group1 />} />
               <Route path="/group-2" element={<Group2 />} />
